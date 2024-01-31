@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propuneri îmbunătățiri</title>
+    <style>
+        body {
+                font-family: Arial, sans-serif;
+                text-align: center;
+                margin: 0; /* Elimină marginile implicit adăugate de browser */
+                padding: 0; /* Elimină padding-ul implicit adăugat de browser */
+                height: 100vh; /* 100% din înălțimea vizibilă a ecranului */
+                background-image: url('{{ url_for('static', filename='backinspet.jpg') }}');
+                background-size: cover;
+                background-position: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+        }
+
+        .success-message {
+                max-width: 600px;
+                margin: 0 auto;
+                padding: 20px;
+                border: 1px solid #4CAF50;
+                border-radius: 8px;
+                background-color: rgba(233, 249, 233, 0.8);
+                text-align: center;
+        }
+        h2 {
+                color: #4CAF50;
+        }
+
+        p {
+                color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="success-message">
+        <h2>Mulțumim pentru completarea formularului!</h2>
+        <p>Echipa noastră apreciază implicarea ta și contribuția adusă.</p>
+           <p> Cu apreciere, </p>
+           <p> INSPET SA Ploiești</p>
+    </div>
+</body>
+</html>

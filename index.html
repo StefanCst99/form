@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propuneri îmbunătățiri</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+            background-image: url('{{ url_for('static', filename='backinspet.jpg') }}');
+            background-size: cover;
+            background-position: center;
+        }
+        .form-container {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.8); /* Cadru alb transparent */
+            border-radius: 8px;
+            background-color: rgba(255, 255, 255, 0.5); /* Fundal alb transparent */
+            text-align: left;
+        }
+        form {
+            margin-top: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2><center>Formular - Propuneri îmbunătățiri</h2>
+        <p>Scopul acestui formular este de a colecta feedback-ul angajaților, cu accent pe identificarea aspectelor care pot fi îmbunătățite pentru a spori eficiența și a îmbunătăți experiența. Prin furnizarea de răspunsuri și sugestii constructive, fiecare angajat contribuie la procesul de optimizare a procedurilor, astfel încât să poată beneficia de un mediu de lucru mai eficient și mai plăcut. Încurajăm sinceritatea și detalierea observațiilor pentru a asigura că schimbările ulterioare sunt aliniate nevoilor și așteptărilor clienților noștri.</p>
+
+
+
+
+    <form action="/submit" method="post">
+        <label for="nume">Nume, Prenume:</label>
+        <input type="text" id="nume" name="nume" required><br>
+
+        <label for="dep">Departament, Funcție:</label>
+        <input type="text" id="dep" name="dep" required><br>
+
+        <label for="con">Prin completarea acestui formular, sunt de acord să împărtășesc feedback-ul meu pentru a contribui la îmbunătățirea condițiilor de lucru. Înțeleg că informațiile furnizate vor fi utilizate în scopuri de evaluare și dezvoltare la locul de muncă și vor fi tratate în conformitate cu politica de confidențialitate a organizației.</label>
+        <input id="con" name="con" required></input>
+
+        <label for="int1">1.Cum ai descrie mediul de lucru actual și în ce mod crezi că ar putea fi îmbunătățit pentru a facilita activitățile zilnice? </label>
+        <input type="text" id="int1" name="int1" required><br>
+
+        <label for="int2">2.Există anumite sarcini sau aspecte ale muncii tale care consideri că ar putea fi simplificate sau automatizate pentru a reduce efortul depus?</label>
+        <input type="text" id="int2" name="int2" required><br>
+
+        <label for="int3">3.Ce resurse sau instrumente adiționale crezi că ar putea fi adăugate pentru a sprijini eficiența în îndeplinirea sarcinilor de zi cu zi?</label>
+        <input type="text" id="int3" name="int3" required><br>
+
+        <label for="int4">4.Ai sugestii pentru a îmbunătăți comunicarea și colaborarea în echipă la locul de muncă?</label>
+        <input type="text" id="int4" name="int4" required><br>
+
+        <label for="int5">5.Există aspecte ale infrastructurii tehnologice sau ale echipamentelor pe care le-ai dori să le vezi îmbunătățite pentru a-ți ușura munca?</label>
+        <input type="text" id="int5" name="int5" required><br>
+
+        <label for="int6">6.Crezi că ar fi benefic să se ofere training sau resurse suplimentare pentru a vă dezvolta abilitățile și pentru a face față mai eficient sarcinilor de lucru?</label>
+        <input type="text" id="int6" name="int6" required><br>
+
+        <label for="int7">7.Care sunt cele mai mari provocări cu care te confrunți în timpul zilei de lucru și cum crezi că ar putea fi gestionate mai bine?</label>
+        <input type="text" id="int7" name="int7" required><br>
+
+
+
+        <input type="submit" value="Trimite">
+    </form>
+</body>
+</html>
